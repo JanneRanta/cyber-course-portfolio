@@ -49,7 +49,10 @@ Part B: HTTPS capture
 
 5. Username and password
 
-The username and password can't be aren't readable becose the https uses TLS = (Transport Layer Security) that encryps http content 
+The username and password aren't readable because HTTPS uses TLS (Transport Layer Security), 
+which encrypts the HTTP content before it is sent over the network. 
+This means that someone monitoring the network can see the encrypted packets, 
+but they cannot normally read the username or password from them.
 
 6. Server Name / SNI
 
@@ -57,10 +60,10 @@ The server name shown in the TLS handshake is:
 
 lab-portal.local
 
-
 7. Information still visible
 
-An eavesdropper can still see the client and server IP addresses, connection timing and packet sizes, even though the HTTP contents are encrypted.
+An eavesdropper can still see the client and server IP addresses, 
+connection timing and packet sizes, even though the HTTP contents are encrypted.
 
 The client IP address is 10.10.10.50 and the server IP address is 10.10.10.10.
 
